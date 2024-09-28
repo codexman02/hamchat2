@@ -112,6 +112,7 @@ console.log(id,code,"verify ho rha")
 
 //////GET USER FUNCTION
 export async function getUserAndReciever({user_id,reciever_id}:{user_id?:string,reciever_id?:string}){
+  await dbConnect();
 try {
   let user=await User.User.findOne({_id:user_id});
   let reciever;
