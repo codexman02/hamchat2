@@ -1,0 +1,500 @@
+[{
+  "_id": {
+    "$oid": "66b0ef3f4525fe2e5f160979"
+  },
+  "name": null,
+  "username": "hamzaisme",
+  "email": "hamzahusain02@gmail.com",
+  "password": "$2a$10$vV/nXSx3kOTkp6PXp7kuL.7.Ky9pBNc5VP9XAA/KILaSvsvYedHbm",
+  "contacts": [
+    "66b0f1334525fe2e5f160983",
+    "66b38c84a7a45b506118262c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 6445,
+  "VerificationExpiry": {
+    "$date": "2024-07-08T15:26:55.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b0f1334525fe2e5f160983",
+      "lastMessage": {
+        "content": "bol yaar",
+        "sentAt": {
+          "$date": "2024-08-14T14:34:03.011Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66bcc05bee99a5a83048bf5f"
+      }
+    },
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "nice",
+        "sentAt": {
+          "$date": "2024-08-12T09:50:13.260Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b9dad57ed83c41da6fb2ed"
+      }
+    }
+  ],
+  "__v": 0,
+  "groups": [
+    {
+      "members": [],
+      "_id": {
+        "$oid": "66bf7e11e0a1baf118cfd45f"
+      }
+    },
+    {
+      "members": [],
+      "_id": {
+        "$oid": "66bf7e7de0a1baf118cfd47c"
+      }
+    },
+    {
+      "members": [],
+      "_id": {
+        "$oid": "66bf7efbe0a1baf118cfd4ae"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "66bf7f5f21942a94f8e70937"
+      },
+      "members": []
+    },
+    {
+      "_id": {
+        "$oid": "66bf7fdc21942a94f8e7096d"
+      },
+      "members": []
+    },
+    {
+      "_id": {
+        "$oid": "66bf80476d24c69a331706ec"
+      },
+      "members": []
+    },
+    {
+      "_id": {
+        "$oid": "66bf86126d24c69a331707f6"
+      },
+      "members": [
+        {
+          "user_id": "12345",
+          "sentAt": {
+            "$date": "2024-08-16T17:02:10.008Z"
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66bf86796d24c69a33170825"
+      },
+      "members": []
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66b0f1334525fe2e5f160983"
+  },
+  "name": null,
+  "username": "choco",
+  "email": "choco@gmail.com",
+  "password": "$2a$10$s2RvCgO3EuHsf4H1/Ha4M.O5RHdvx/cTzHnjQ2bUAGzy.TwgMki9W",
+  "contacts": [
+    "66b0ef3f4525fe2e5f160979",
+    "66b38c84a7a45b506118262c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 4006,
+  "VerificationExpiry": {
+    "$date": "2024-07-08T15:35:15.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b0ef3f4525fe2e5f160979",
+      "lastMessage": {
+        "content": "bol yaar",
+        "sentAt": {
+          "$date": "2024-08-14T14:34:03.032Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66bcc05bee99a5a83048bf61"
+      }
+    },
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hamza wants to start a conversation",
+        "sentAt": {
+          "$date": "2024-08-07T15:15:33.531Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b38f95a7a45b506118285c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b0fa014525fe2e5f160a09"
+  },
+  "name": null,
+  "username": null,
+  "email": "hamzahusain01@gmail.com",
+  "password": null,
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": null,
+  "VerificationExpiry": null,
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38c84a7a45b506118262c"
+  },
+  "name": null,
+  "username": "hamza",
+  "email": "hamza@gmail.com",
+  "password": "$2a$10$eQK5afxN.gy2B2RNtGm9J.fcu6CIZwedQygXCk/35JJXH5EKbiUEm",
+  "contacts": [
+    "66b0f1334525fe2e5f160983",
+    "66b38ccea7a45b5061182638",
+    "66b38cf1a7a45b5061182641",
+    "66b3ac40a7a45b506118448c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 3423,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:02:27.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b38ccea7a45b5061182638",
+      "lastMessage": {
+        "content": "kya kr rhe ho",
+        "sentAt": {
+          "$date": "2024-08-16T16:09:01.802Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66bf799d0bc630b963f98cf1"
+      }
+    },
+    {
+      "contact_id": "66b0f1334525fe2e5f160983",
+      "lastMessage": {
+        "content": "hamza wants to start a conversation",
+        "sentAt": {
+          "$date": "2024-08-07T15:15:33.531Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b38f95a7a45b506118285a"
+      }
+    },
+    {
+      "contact_id": "66b38cf1a7a45b5061182641",
+      "lastMessage": {
+        "content": "hamza wants to start a conversation",
+        "sentAt": {
+          "$date": "2024-08-07T15:16:12.722Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b38fbca7a45b50611828d4"
+      }
+    },
+    {
+      "contact_id": "66b3ac40a7a45b506118448c",
+      "lastMessage": {
+        "content": "hi hamza",
+        "sentAt": {
+          "$date": "2024-08-10T16:25:58.762Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b794967230131fa1aa9a77"
+      }
+    }
+  ],
+  "__v": 0,
+  "groups": [
+    {
+      "members": [
+        {
+          "user_id": "23421424",
+          "hasAccepted": false
+        }
+      ],
+      "_id": {
+        "$oid": "66bf7794a0bfe339e87df9be"
+      },
+      "groupName": "New group name",
+      "group_id": "5a4e809e-71f7-4c84-92b8-2e689f3659ac",
+      "lastMessage": {
+        "content": "last message h mera",
+        "sentAt": {
+          "$date": "2024-08-16T16:03:51.000Z"
+        }
+      }
+    },
+    {
+      "members": [],
+      "_id": {
+        "$oid": "66bf78a7a0bfe339e87dfa17"
+      }
+    },
+    {
+      "members": [],
+      "_id": {
+        "$oid": "66bf7ab70bc630b963f98d97"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66b38cbda7a45b5061182633"
+  },
+  "name": null,
+  "username": "hamza1",
+  "email": "hamza1@gmail.com",
+  "password": "$2a$10$ZfDS34QTFx/necmG.jDTFeAN1lMUgWlBF5UET9qlVOPhur9llReeK",
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": 5533,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:03:25.000Z"
+  },
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38ccea7a45b5061182638"
+  },
+  "name": null,
+  "username": "rahul",
+  "email": "rahul@gmail.com",
+  "password": "$2a$10$ueW7EZ5ijIvOMgspMsQz5.1Ursp.7LvzQd0yngmCwZ/qSF2WMi8wC",
+  "contacts": [
+    "66b38c84a7a45b506118262c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 9973,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:03:42.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "kya kr rhe ho",
+        "sentAt": {
+          "$date": "2024-08-16T16:09:01.810Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66bf799d0bc630b963f98cf3"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38cdaa7a45b506118263b"
+  },
+  "name": null,
+  "username": "abhishek",
+  "email": "abhishek@gmail.com",
+  "password": "$2a$10$9RYz4NJ2og8HILLlYLFnVee7iNJoy5ny3B8FPhjk8cTjqfp3CztLy",
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": 3044,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:03:54.000Z"
+  },
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38ce6a7a45b506118263e"
+  },
+  "name": null,
+  "username": "akash",
+  "email": "akash@gmail.com",
+  "password": "$2a$10$NM9PY57CCtfJXbBcy8rGwObEyz7I5rKPT4soGb.gjHQMGc.19Cs2O",
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": 8411,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:04:06.000Z"
+  },
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38cf1a7a45b5061182641"
+  },
+  "name": null,
+  "username": "ichigo",
+  "email": "ichigo@gmail.com",
+  "password": "$2a$10$j15Sa8U.jhr74vl4B05Eh.OD64NuXiKye6NqSRVfeL1VhW7.QwWCu",
+  "contacts": [
+    "66b38c84a7a45b506118262c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 3535,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:04:17.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hamza wants to start a conversation",
+        "sentAt": {
+          "$date": "2024-08-07T15:16:12.722Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b38fbca7a45b50611828d6"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38d00a7a45b5061182644"
+  },
+  "name": null,
+  "username": "rukia",
+  "email": "rukia@gmail.com",
+  "password": "$2a$10$YBzx1TY1tg/dWfUMjLYwYuO9j0EXNgg2g3c5zF/62fe/H/b5b60w.",
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": 8146,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:04:32.000Z"
+  },
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b38d0da7a45b5061182647"
+  },
+  "name": null,
+  "username": "bakru",
+  "email": "bakru@gmail.com",
+  "password": "$2a$10$l3LtPkaw3xC.kItLZLageeOSO.9Ab4rRXcBzZEIRyhKfzlHcrF7FC",
+  "contacts": [],
+  "isVerified": false,
+  "VerificationCode": 6174,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T15:04:45.000Z"
+  },
+  "contactList": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b3ac40a7a45b506118448c"
+  },
+  "name": null,
+  "username": "shivang",
+  "email": "shivang@gmail.com",
+  "password": "$2a$10$6sglC4xvFKeibtRKoO1vhuMAOT4M6Lxq36fhgYhYjWsHnf.pHjDwW",
+  "contacts": [
+    "66b38c84a7a45b506118262c",
+    "66b38c84a7a45b506118262c",
+    "66b38c84a7a45b506118262c",
+    "66b38c84a7a45b506118262c"
+  ],
+  "isVerified": false,
+  "VerificationCode": 2042,
+  "VerificationExpiry": {
+    "$date": "2024-09-08T17:17:52.000Z"
+  },
+  "contactList": [
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hi hamza",
+        "sentAt": {
+          "$date": "2024-08-07T17:25:49.368Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b3ae1da7a45b506118469b"
+      }
+    },
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hi hamza",
+        "sentAt": {
+          "$date": "2024-08-10T16:09:28.563Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b790b8c003624b7cdef437"
+      }
+    },
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hi hamza",
+        "sentAt": {
+          "$date": "2024-08-10T16:16:17.693Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b792517230131fa1aa9677"
+      }
+    },
+    {
+      "contact_id": "66b38c84a7a45b506118262c",
+      "lastMessage": {
+        "content": "hi hamza",
+        "sentAt": {
+          "$date": "2024-08-10T16:25:58.762Z"
+        }
+      },
+      "numberOfNewMessages": 1,
+      "_id": {
+        "$oid": "66b794967230131fa1aa9a79"
+      }
+    }
+  ],
+  "__v": 0
+}]

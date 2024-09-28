@@ -1,0 +1,37 @@
+{_id:ObjectId("668512f00d7fddaaed1db364")},{contactList:{$elemMatch:{"$.contact_id";"668430510eec7e5396017ad6"}}}
+
+db.users.findOneAndUpdate({$and:[{_id:ObjectId("668512f00d7fddaaed1db364")},{contactList:{$elemMatch:{"contact_id":"668510070d7fddaaed1db356"}}}]},{$set:{"contactList.$.lastMessage":{a:"jk1"}}})
+
+
+db.users.updateOne({_id:ObjectId("66b38c84a7a45b506118262c")},{$pull:{contacts:{$eq:"66b38ccea7a45b5061182638"}}})
+
+
+
+db.users.updateOne({_id:ObjectId("66b38c84a7a45b506118262c")},{$pull:{contactList:{contact_id:"66b3ac40a7a45b506118448c"}}})
+
+
+db.users.findOne({$and:[{contacts:{$elemMatch:{$eq:"66b0f1334525fe2e5f160983"}}},{_id:ObjectId("66b0ef3f4525fe2e5f160979")}]},{email:1});
+
+
+db.messages.updateOne({"messages.messageId":"e6cd04ec-5f79-468e-9ec0-597730eb6338"},{$set:{"messages.$.content":"hey"}})
+
+
+db.groups.updateOne({group_id:"d50337aa-f5aa-4bbd-a509-0ef1bf905799"},{$pull:{messages:{messageId:"82a4e22d-7a1e-45a4-b600-128ecb58f163"}}});
+
+
+
+db.groups.updateOne({$and:[{group_id:"d50337aa-f5aa-4bbd-a509-0ef1bf905799"},{"messages.messageId":"2a84fa81-841e-4d7e-96d3-775a7711e5f5"}]},{$set:{"messages.$.content":"bye bye ji"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+hamchat
+
+db.groups.updateOne({group_id:"d50337aa-f5aa-4bbd-a509-0ef1bf905799"},{$push:{members:{user_id:"1233",hasAccepted:false}}});
+
+
+db.groups.updateOne({$and:[{group_id:"25f7e372-0402-48ae-9c0f-bd88cdb20b56"},{"members.user_id":"66b0f1334525fe2e5f160983"}]},{$set:{"members.$.hasAccepted":true}})
+

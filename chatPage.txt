@@ -1,0 +1,231 @@
+"use client";
+import {
+  getChat,
+  getUser,
+  saveImage,
+  submitNewMessages,
+} from "@/app/utils/crud/functions";
+import { io } from "socket.io-client";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { Progress } from "@/components/ui/progress";
+import ImageIcon from "@/app/snippets/imageIcon";
+import SendIcon from "@/app/snippets/sendIcon";
+import LightGallery from "lightgallery/react";
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+//import plugins
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import { userType } from "@/app/types/userType";
+import { useToast } from "@/components/ui/use-toast";
+
+export default function Chats() {
+  let file = useRef<HTMLInputElement | null>(null);
+  let params = useParams();
+  const socket=io("http://localhost:5000");
+  let nameArr=[params.id,params.chatId].sort();
+  let socketEventName=(nameArr[0] as string+nameArr[1]+"_files");
+ socket.on(socketEventName,(data)=>{
+  console.log(data)
+ });
+  let [user, setUser] = useState<userType>({
+    id: "",
+    email: "",
+    username: "",
+    name: "",
+    isVerified: false,
+  });
+  let [isFetch, setIsFetch] = useState(false);
+  let [progress, setProgress] = useState(20);
+
+  let [isMessage, setIsMessage] = useState(false);
+  let [isFormData, setIsFormData] = useState(false);
+  const [newMessage, setNewMessage] = useState<string>("");
+  let [data1, setData] = useState<any>(null);
+  async function chats() {
+    setProgress(70);
+    let chat = await getChat([params.id as string, params.chatId as string]);
+    setProgress(90);
+    let user = await getUser(params.id);
+    setUser(user.data);//SETTING THE CURRENT USER
+    let response = await JSON.parse(chat.data);
+       console.log(response,"resposne")
+    setData(response[0].messages);
+    setIsMessage(true);
+    setProgress(90);
+    return response[0].messages;
+  }
+  useEffect(() => {
+    chats();
+  }, []);
+ 
+  //////////////
+  let form = useRef<HTMLFormElement | null>(null);
+  ////////////////////
+  let { toast } = useToast();
+  async function handleSend() {
+    setIsFetch(true);
+    if (newMessage.length == 0) {
+      toast({
+        title: "Please write something in the message field",
+        variant: "destructive",
+      });
+      return;
+    }
+    console.log(newMessage.length);
+    let data = {
+      content: newMessage,
+      sentBy: user?.email,
+      sentAt: new Date(Date.now()).toLocaleString(),
+      seenBy: [user?.email],
+    };
+
+    let users = [params.id, params.chatId];
+    let res = await submitNewMessages(data, users);
+    // console.log(newMessage)
+    // console.log(res)
+  }
+  const formData = new FormData();
+  let [images, setImages] = useState<FileList | []>([]);
+  /////////FUNCTION OF HANDLING FILE
+  async function handleFile(e: FormData) {
+    if (images?.length == 0) {
+      toast({
+        title: "Please select an image first",
+        variant: "destructive",
+      });
+      return;
+    }
+    let keyArr = [];
+    for (let i = 0; i < images!.length; i++) {
+      let key = i.toString();
+      keyArr.push(key);
+      formData.set(key, images![i]);
+      // console.log(images[i])
+
+    }
+    let users = [params.id as string, params.chatId as string];
+    let userData={sentBy:user.email,seenBy:[user.email]}
+    saveImage(formData,keyArr,users,userData)
+
+//Empty the images again 
+    setImages([]);
+
+  }
+
+  ////////////HANDLING FILE END HERE
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
+
+  return (
+    <>
+      <main className="w-full h-full max-h-full flex flex-col">
+        <div className="w-full h-full bg-gray-50 flex flex-col overflow-y-scroll">
+          {isMessage ? (
+            data1 ? (
+              data1.map((ele: any,i:number) => (
+                <div className="w-full" key={ele._id}>
+                  {ele.sentBy == user.email ? (
+                    <div
+                      className="w-full p-3 relative flex justify-end"
+                      key={i}
+                    >
+                      <div className="inline-block  w-1/2 bg-gray-600  text-white shadow-md rounded-xl overflow-hidden">
+                        {ele.content ? (
+                          <p className="px-5 py-4">{ele.content}</p>
+                        ) : (
+                          <div className="w-full ">
+                            <LightGallery
+                              onInit={onInit}
+                              speed={500}
+                              plugins={[lgThumbnail, lgZoom]}
+                            >
+                              <a href={ele.image.src}>
+                                <img alt="img1" src={ele.image.src} />
+                              </a>
+                            </LightGallery>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      className="w-full p-3 relative flex justify-start"
+                      key={i}
+                    >
+                      <div className="inline-block  w-1/2 bg-white shadow-md rounded-xl ">
+                        {ele.content ? (
+                          <p className="px-5 py-4">{ele.content}</p>
+                        ) : (
+                          <div className="w-full">
+                            <LightGallery
+                              onInit={onInit}
+                              speed={500}
+                              plugins={[lgThumbnail, lgZoom]}
+                            >
+                              <a href={ele.src}>
+                                <img alt="img1" src={ele.src} />
+                              </a>
+                            </LightGallery>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <>NO message</>
+            )
+          ) : (
+            <>
+              <div className="flex flex-col w-full h-full justify-center items-center">
+                <Progress value={progress} className="w-1/2 h-2" />
+                <p className="w-1/2 text-sm my-1 text-center">
+                  Loading messages...
+                </p>
+              </div>
+            </>
+          )}
+        </div>
+        <div className="message_input px-2 flex gap-4 py-2 bg-white border-t shadow-lg border-solid border-t-gray-200">
+          <div className="cursor-pointer">
+            <form action={handleFile} ref={form} id="form">
+              <input
+                type="file"
+                multiple
+                className="hidden"
+                ref={file}
+                name="files"
+                onChange={(e) => setImages(e.target.files)}
+              />
+              <button type="submit">Send Image</button>
+            </form>
+            <div
+              onClick={() => {
+                file.current?.click();
+              }}
+            >
+              <ImageIcon width={14} height={14} />
+            </div>
+          </div>
+          <Input
+            placeholder="type your message here..."
+            onChange={(e) => setNewMessage(e.target.value.trim())}
+          />
+          <Button onClick={() => handleSend()}>
+            <SendIcon width={15} height={15} />
+          </Button>
+        </div>
+      </main>
+    </>
+  );
+}
