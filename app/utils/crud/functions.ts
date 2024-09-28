@@ -16,6 +16,7 @@ import { Requests } from "@/app/models/Requests";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { Group } from "@/app/models/Group";
+import { dbConnect } from "../db";
 // let socket=io("http://localhost:5000");
 type data = {
   username: string;
@@ -23,6 +24,7 @@ type data = {
   password: string;
 };
 export async function signupFunction(data: data) {
+  await dbConnect();
   let pass = await bcrypt.hashSync(data.password, 10);
   let user = await User.User.findOne({
     $or: [{ username: data.username }, { email: data.email }],
