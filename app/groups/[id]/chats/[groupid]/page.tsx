@@ -5,7 +5,7 @@ import SendIcon from "@/app/snippets/sendIcon";
 import SmileIcon from "@/app/snippets/smileIcon";
 import StopIcon from "@/app/snippets/stopIcon";
 import { v4 as uuidv4 } from 'uuid';
-import { deleteGroupMessage, editGroupMessage, getGroupChat, getUser, getUserGroup, GroupRequest, sendMessageGroup } from "@/app/utils/crud/functions";
+import { deleteGroupMessage, editGroupMessage, getGroupChat, getUSer, getUserGroup, GroupRequest, sendMessageGroup } from "@/app/utils/crud/functions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useParams } from "next/navigation"
