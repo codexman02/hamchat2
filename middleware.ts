@@ -11,7 +11,7 @@ import { dbConnect } from './app/utils/db';
  
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest,response:NextResponse) {
-  dbConnect();
+  await dbConnect();
 //   const session = await getServerSession(request,response,authOptions);
 // console.log(session)
 const token=await getToken({req:request,secret:process.env.NEXTAUTH_SECRET!});
